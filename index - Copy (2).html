@@ -1,0 +1,964 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Habib Business Group | International Trade & Cross-Border Solutions</title>
+  <meta name="description" content="Habib Business Group connects Turkey, Ethiopia, Djibouti & Africa through reliable import/export, sourcing, and documentation services.">
+  <style>
+    :root {
+      --bg: #020817;
+      --bg-soft: #050816;
+      --panel: #0b1220;
+      --accent: #38bdf8;
+      --accent-soft: rgba(56,189,248,0.08);
+      --accent-strong: #22c55e;
+      --border-soft: #111827;
+      --text: #e5e7eb;
+      --muted: #9ca3af;
+      --radius-xl: 24px;
+      --radius-full: 999px;
+      --shadow-soft: 0 18px 45px rgba(15,23,42,0.78);
+      --transition: 0.28s ease;
+      --font-main: system-ui,-apple-system,BlinkMacSystemFont,"SF Pro Text","Segoe UI",sans-serif;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: var(--font-main);
+      background:
+        radial-gradient(circle at top left, rgba(56,189,248,0.06), transparent),
+        radial-gradient(circle at top right, rgba(37,99,235,0.04), transparent),
+        var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* HEADER / NAV */
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(18px);
+      background: rgba(2,6,23,0.96);
+      border-bottom: 1px solid rgba(148,163,253,0.08);
+    }
+
+    .nav {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 14px 18px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+    }
+
+    .nav-left {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo-symbol {
+      width: 30px;
+      height: 30px;
+      border-radius: 14px;
+      background: radial-gradient(circle at 20% 0, var(--accent), transparent) #020817;
+      border: 1px solid rgba(56,189,248,0.7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.72rem;
+      font-weight: 600;
+      color: var(--accent);
+      box-shadow: 0 8px 20px rgba(15,23,42,0.9);
+    }
+
+    .logo-text {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .logo-text span.name {
+      font-size: 0.95rem;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+    }
+
+    .logo-text span.sub {
+      font-size: 0.64rem;
+      color: var(--muted);
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 16px;
+      font-size: 0.8rem;
+      color: var(--muted);
+    }
+
+    .nav-links a {
+      padding: 6px 10px;
+      border-radius: var(--radius-full);
+      transition: var(--transition);
+    }
+
+    .nav-links a:hover {
+      background: rgba(9,9,11,0.98);
+      color: var(--accent);
+    }
+
+    .nav-cta {
+      padding: 7px 14px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(56,189,248,0.7);
+      font-size: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: linear-gradient(
+        to right,
+        rgba(56,189,248,0.2),
+        rgba(2,6,23,1)
+      );
+      cursor: pointer;
+      transition: var(--transition);
+      color: var(--accent);
+      white-space: nowrap;
+    }
+
+    .nav-cta span.icon {
+      font-size: 0.85rem;
+    }
+
+    .nav-cta:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 26px rgba(15,23,42,0.96);
+      background: linear-gradient(
+        to right,
+        rgba(56,189,248,0.26),
+        rgba(3,7,18,1)
+      );
+    }
+
+    /* LAYOUT */
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 26px 18px 40px;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+    }
+
+    /* HERO */
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0,1.9fr) minmax(260px,1.4fr);
+      gap: 26px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      background: var(--accent-soft);
+      border: 1px solid rgba(56,189,248,0.38);
+      font-size: 0.7rem;
+      color: var(--accent);
+      margin-bottom: 10px;
+    }
+
+    .eyebrow span.dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--accent);
+    }
+
+    .hero h1 {
+      font-size: clamp(2rem, 3.3vw, 2.7rem);
+      font-weight: 650;
+      letter-spacing: 0.01em;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 span {
+      color: var(--accent);
+    }
+
+    .hero-subtitle {
+      font-size: 0.9rem;
+      color: var(--muted);
+      margin-bottom: 14px;
+      max-width: 610px;
+    }
+
+    .hero-tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 16px;
+    }
+
+    .hero-tags span {
+      font-size: 0.68rem;
+      padding: 5px 10px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(75,85,99,1);
+      color: var(--muted);
+      background: rgba(6,8,18,0.98);
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .btn-primary {
+      padding: 10px 20px;
+      border-radius: var(--radius-full);
+      border: none;
+      font-size: 0.82rem;
+      background: linear-gradient(to right, var(--accent), #2563eb);
+      color: #020817;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: var(--shadow-soft);
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: var(--transition);
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 55px rgba(15,23,42,0.98);
+    }
+
+    .btn-outline {
+      padding: 9px 16px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(75,85,99,1);
+      background: rgba(2,6,23,0.98);
+      color: var(--muted);
+      font-size: 0.78rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--transition);
+    }
+
+    .btn-outline:hover {
+      color: var(--accent);
+      border-color: rgba(56,189,248,0.6);
+      background: #020817;
+      transform: translateY(-1px);
+    }
+
+    .hero-note {
+      font-size: 0.7rem;
+      color: var(--muted);
+    }
+
+    /* HERO RIGHT - VISUAL PANEL */
+    .hero-right {
+      position: relative;
+    }
+
+    .visual-card {
+      background:
+        radial-gradient(circle at top, rgba(56,189,248,0.08), transparent)
+        var(--panel);
+      border-radius: var(--radius-xl);
+      padding: 14px 14px 12px;
+      border: 1px solid rgba(51,65,85,0.9);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 9px;
+      font-size: 0.75rem;
+    }
+
+    .visual-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .visual-title {
+      font-size: 0.8rem;
+      font-weight: 500;
+      color: var(--accent);
+    }
+
+    .logo-placeholder {
+      width: 40px;
+      height: 40px;
+      border-radius: 18px;
+      border: 1px solid rgba(56,189,248,0.5);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.6rem;
+      color: var(--accent);
+      background: radial-gradient(circle at 10% 0, rgba(56,189,248,0.25), transparent)
+        #020817;
+    }
+
+    .visual-text {
+      font-size: 0.68rem;
+      color: var(--muted);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 8px;
+      margin-top: 4px;
+    }
+
+    .metric {
+      padding: 7px 8px;
+      border-radius: 16px;
+      background: #020817;
+      border: 1px solid rgba(51,65,85,0.95);
+      display: flex;
+      flex-direction: column;
+      gap: 1px;
+    }
+
+    .metric span.value {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--accent);
+    }
+
+    .metric span.label {
+      font-size: 0.55rem;
+      color: var(--muted);
+    }
+
+    .mini-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 5px;
+      font-size: 0.58rem;
+      color: var(--muted);
+    }
+
+    .mini-pill {
+      padding: 3px 8px;
+      border-radius: var(--radius-full);
+      border: 1px solid rgba(56,189,248,0.35);
+      color: var(--accent);
+    }
+
+    /* SECTION GENERIC */
+    section {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .section-header {
+      display: flex;
+      align-items: baseline;
+      gap: 8px;
+    }
+
+    .section-header .bar {
+      width: 20px;
+      height: 2px;
+      border-radius: 999px;
+      background: var(--accent);
+    }
+
+    .section-header h2 {
+      font-size: 1rem;
+      font-weight: 600;
+    }
+
+    .section-sub {
+      font-size: 0.78rem;
+      color: var(--muted);
+      max-width: 760px;
+    }
+
+    /* SERVICES GRID */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3,minmax(0,1fr));
+      gap: 12px;
+      margin-top: 6px;
+    }
+
+    .service-card {
+      background: var(--panel);
+      padding: 10px 10px 9px;
+      border-radius: 18px;
+      border: 1px solid var(--border-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+      font-size: 0.7rem;
+      transition: var(--transition);
+      box-shadow: 0 10px 26px rgba(15,23,42,0.72);
+    }
+
+    .service-card strong {
+      font-size: 0.75rem;
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    .service-card span.tag {
+      font-size: 0.58rem;
+      color: var(--muted);
+    }
+
+    .service-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 18px 40px rgba(15,23,42,0.95);
+      border-color: rgba(56,189,248,0.4);
+    }
+
+    /* MARKETS STRIP */
+    .markets-strip {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 9px 10px;
+      background: radial-gradient(circle at left, rgba(56,189,248,0.12), transparent)
+                  rgba(2,6,23,1);
+      border-radius: 18px;
+      border: 1px solid rgba(55,65,81,0.95);
+      font-size: 0.62rem;
+      color: var(--muted);
+    }
+
+    .markets-strip span.label {
+      color: var(--accent);
+      font-weight: 500;
+    }
+
+    /* PROCESS TIMELINE */
+    .process {
+      display: grid;
+      grid-template-columns: repeat(4,minmax(0,1fr));
+      gap: 10px;
+      font-size: 0.66rem;
+      margin-top: 4px;
+    }
+
+    .step {
+      padding: 8px 9px;
+      border-radius: 16px;
+      background: var(--panel);
+      border: 1px solid var(--border-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .step span.num {
+      font-size: 0.6rem;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+    }
+
+    .step strong {
+      font-size: 0.72rem;
+    }
+
+    /* CONTACT SECTION */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: minmax(0,1.7fr) minmax(260px,1.3fr);
+      gap: 18px;
+      margin-top: 4px;
+    }
+
+    .contact-card,
+    .info-card {
+      padding: 14px 12px 12px;
+      border-radius: var(--radius-xl);
+      background: var(--panel);
+      border: 1px solid rgba(55,65,81,0.95);
+      box-shadow: var(--shadow-soft);
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-size: 0.72rem;
+    }
+
+    .contact-card label {
+      font-size: 0.64rem;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    .contact-card input,
+    .contact-card textarea {
+      width: 100%;
+      padding: 8px 9px;
+      border-radius: 12px;
+      border: 1px solid rgba(75,85,99,0.95);
+      background: #020817;
+      color: var(--text);
+      font-size: 0.7rem;
+      outline: none;
+      transition: var(--transition);
+      resize: vertical;
+    }
+
+    .contact-card input:focus,
+    .contact-card textarea:focus {
+      border-color: var(--accent);
+      box-shadow: 0 0 0 1px rgba(56,189,248,0.22);
+    }
+
+    .contact-btn {
+      margin-top: 6px;
+      align-self: flex-start;
+      padding: 8px 16px;
+      border-radius: var(--radius-full);
+      border: none;
+      background: linear-gradient(to right, var(--accent), var(--accent-strong));
+      color: #020817;
+      font-size: 0.76rem;
+      font-weight: 600;
+      cursor: pointer;
+      box-shadow: 0 16px 40px rgba(15,23,42,0.97);
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      transition: var(--transition);
+    }
+
+    .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 22px 55px rgba(15,23,42,0.98);
+    }
+
+    .status {
+      font-size: 0.64rem;
+      margin-top: 4px;
+      color: var(--muted);
+    }
+
+    .info-list {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .info-item span.label {
+      font-size: 0.6rem;
+      color: var(--muted);
+    }
+
+    .info-item span.value {
+      font-size: 0.72rem;
+      color: var(--text);
+    }
+
+    .info-note {
+      font-size: 0.64rem;
+      color: var(--muted);
+      margin-top: 6px;
+    }
+
+    /* FOOTER */
+    footer {
+      max-width: 1180px;
+      margin: 0 auto 18px;
+      padding: 0 18px;
+      font-size: 0.62rem;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      align-items: center;
+    }
+
+    footer .right {
+      display: flex;
+      gap: 8px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    /* RESPONSIVE */
+    @media (max-width: 900px) {
+      .hero {
+        grid-template-columns: 1fr;
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .services-grid {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+      }
+
+      .process {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+      }
+
+      .nav-links {
+        display: none;
+      }
+    }
+
+    @media (max-width: 540px) {
+      main {
+        padding: 22px 14px 28px;
+      }
+
+      .services-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAV -->
+  <header>
+    <div class="nav">
+      <div class="nav-left">
+        <div class="logo-symbol">HB</div>
+        <div class="logo-text">
+          <span class="name">HABIB BUSINESS GROUP</span>
+          <span class="sub">International Trade • Sourcing • Documentation</span>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#services">Services</a>
+        <a href="#markets">Markets</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-cta" onclick="scrollToId('contact')">
+        Let’s talk<span class="icon">↗</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section class="hero">
+      <div>
+        <div class="eyebrow">
+          <span class="dot"></span>
+          Bridging Turkey, Ethiopia, Djibouti &amp; Africa with reliable trade support
+        </div>
+        <h1>
+          Strategic <span>import/export, sourcing &amp; documentation</span> support for serious partners.
+        </h1>
+        <p class="hero-subtitle">
+          Habib Business Group helps manufacturers, traders and distributors move goods smoothly
+          between Turkey, East Africa and the wider region with structured processes, clean paperwork
+          and transparent communication.
+        </p>
+        <div class="hero-tags">
+          <span>Import &amp; Export Documentation</span>
+          <span>Supplier &amp; Buyer Sourcing</span>
+          <span>Coffee &amp; Agro Commodities</span>
+          <span>Factory Visits &amp; Local Coordination</span>
+        </div>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="scrollToId('contact')">
+            Request a Proposal <span>↗</span>
+          </button>
+          <button class="btn-outline" onclick="scrollToId('services')">
+            View Services <span>↓</span>
+          </button>
+        </div>
+        <p class="hero-note">
+          Based in Istanbul &amp; Ethiopia — available worldwide via email, WhatsApp &amp; online meetings.
+        </p>
+      </div>
+
+      <div class="hero-right">
+        <div class="visual-card">
+          <div class="visual-header">
+            <div>
+              <div class="visual-title">Your on-ground partner in real markets.</div>
+              <div class="visual-text">
+                We focus on clarity, halal income, and long-term win–win partnerships.
+              </div>
+            </div>
+            <!-- LOGO PLACEHOLDER – replace text with your PNG if you have a logo -->
+            <div class="logo-placeholder">
+              LOGO
+            </div>
+          </div>
+          <div class="metrics">
+            <div class="metric">
+              <span class="value">TR • ET • DJ</span>
+              <span class="label">Key operational corridors</span>
+            </div>
+            <div class="metric">
+              <span class="value">Docs</span>
+              <span class="label">PI, CI, PL, COO, BL, LC support</span>
+            </div>
+            <div class="metric">
+              <span class="value">Focus</span>
+              <span class="label">Agro, FMCG, industrial goods</span>
+            </div>
+          </div>
+          <div class="mini-strip">
+            <span>Professional updates &amp; follow-ups.</span>
+            <span>Respect for your time &amp; brand.</span>
+            <span class="mini-pill">Confidential &amp; ethical.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="section-header">
+        <div class="bar"></div>
+        <h2>About Habib Business Group</h2>
+      </div>
+      <p class="section-sub">
+        Habib Business Group operates at the intersection of
+        <strong>international trade, documentation, sourcing and local market intelligence</strong>.
+        We understand how challenging it is to find trusted partners, validate suppliers, prepare compliant documents,
+        and coordinate from a distance. Our role is to be your reliable extension in
+        <strong>Turkey, Ethiopia, Djibouti and nearby regions</strong>.
+      </p>
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services">
+      <div class="section-header">
+        <div class="bar"></div>
+        <h2>Core Services</h2>
+      </div>
+      <p class="section-sub">
+        We focus on practical, execution-level support — not theory. Every service is delivered with clear communication,
+        traceable steps and respect for Islamic business ethics.
+      </p>
+      <div class="services-grid">
+        <div class="service-card">
+          <strong>Import &amp; Export Documentation</strong>
+          <span class="tag">PI • CI • PL • COO • BL • LC basics</span>
+          <p>
+            Draft, organize and check key data so your shipments move faster and with fewer corrections.
+          </p>
+        </div>
+        <div class="service-card">
+          <strong>Supplier &amp; Buyer Sourcing</strong>
+          <span class="tag">Turkey &amp; East Africa</span>
+          <p>
+            Shortlist serious partners, basic verification, and comparison tables ready for your decision.
+          </p>
+        </div>
+        <div class="service-card">
+          <strong>Local Coordination (Istanbul)</strong>
+          <span class="tag">Meetings • Factory follow-ups</span>
+          <p>
+            Visit factories, attend meetings, share updates, photos and summaries as your on-ground representative.
+          </p>
+        </div>
+        <div class="service-card">
+          <strong>Coffee &amp; Agro Commodities</strong>
+          <span class="tag">Yirgacheffe • Sesame • Pulses</span>
+          <p>
+            Connect with reliable channels for Ethiopian coffee and agro products under clear terms.
+          </p>
+        </div>
+        <div class="service-card">
+          <strong>Market Research &amp; Intelligence</strong>
+          <span class="tag">Concise, decision-ready</span>
+          <p>
+            Product, price and competitor snapshots to test new markets without wasting months.
+          </p>
+        </div>
+        <div class="service-card">
+          <strong>Long-Term Representation</strong>
+          <span class="tag">Commission / retainer</span>
+          <p>
+            Structured agreements with reporting, KPIs and transparent commission or fee models.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- MARKETS & PROCESS -->
+    <section id="markets">
+      <div class="section-header">
+        <div class="bar"></div>
+        <h2>Markets &amp; Working Process</h2>
+      </div>
+      <div class="markets-strip">
+        <span class="label">Primary corridors:</span>
+        <span>Turkey → Ethiopia / Djibouti</span>
+        <span>Ethiopia → GCC &amp; MENA via Djibouti</span>
+        <span>Trusted contacts across key ports &amp; logistics chains.</span>
+      </div>
+      <div class="process">
+        <div class="step">
+          <span class="num">Step 01</span>
+          <strong>Discovery Call</strong>
+          <p>Understand your products, target markets and required support.</p>
+        </div>
+        <div class="step">
+          <span class="num">Step 02</span>
+          <strong>Scope &amp; Strategy</strong>
+          <p>Define tasks: sourcing, documents, visits, or full-cycle support.</p>
+        </div>
+        <div class="step">
+          <span class="num">Step 03</span>
+          <strong>Execution</strong>
+          <p>We deliver verified info, drafts &amp; coordination with clear timelines.</p>
+        </div>
+        <div class="step">
+          <span class="num">Step 04</span>
+          <strong>Ongoing Partnership</strong>
+          <p>Monthly reports, KPI tracking and long-term collaboration if aligned.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="section-header">
+        <div class="bar"></div>
+        <h2>Contact &amp; Collaboration</h2>
+      </div>
+      <p class="section-sub">
+        Share a brief overview of your company, products and required support.
+        We will respond with clear next steps and a simple, transparent proposal.
+      </p>
+      <div class="contact-grid">
+        <!-- FORM (FRONT-END ONLY) -->
+        <div class="contact-card">
+          <label for="name">Name / Company*</label>
+          <input id="name" type="text" placeholder="e.g. Sunrise Foods FZE" />
+
+          <label for="email">Email*</label>
+          <input id="email" type="email" placeholder="you@example.com" />
+
+          <label for="whatsapp">WhatsApp (with country code)</label>
+          <input id="whatsapp" type="text" placeholder="+971..." />
+
+          <label for="message">Message*</label>
+          <textarea id="message" rows="4" placeholder="Tell us your products, routes, volumes &amp; what support you need."></textarea>
+
+          <button class="contact-btn" onclick="submitForm()">
+            Send Inquiry <span>↗</span>
+          </button>
+          <div id="form-status" class="status">
+            Form demo: your message will be prepared for email sending.
+          </div>
+        </div>
+
+        <!-- DIRECT INFO -->
+        <div class="info-card">
+          <div class="info-list">
+            <div class="info-item">
+              <span class="label">Direct Email</span>
+              <span class="value">
+                <a href="mailto:Habibgerba22@gmail.com">Habibgerba22@gmail.com</a>
+              </span>
+            </div>
+            <div class="info-item">
+              <span class="label">WhatsApp / Phone</span>
+              <span class="value">
+                <a href="tel:+905421646903">+90 542 164 6903</a>
+              </span>
+            </div>
+            <div class="info-item">
+              <span class="label">Base</span>
+              <span class="value">Istanbul, Türkiye &amp; Ethiopia (remote-friendly)</span>
+            </div>
+            <div class="info-item">
+              <span class="label">Availability</span>
+              <span class="value">Serious trade, sourcing &amp; documentation projects only.</span>
+            </div>
+          </div>
+          <p class="info-note">
+            You can also email your <strong>company profile</strong>, <strong>product list</strong>, and
+            <strong>target markets</strong> directly. We reply with structured options instead of generic talk.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div>© <span id="year"></span> Habib Business Group. All rights reserved.</div>
+    <div class="right">
+      <span>Built for real business.</span>
+      <span>Powered by clarity &amp; integrity.</span>
+    </div>
+  </footer>
+
+  <script>
+    function scrollToId(id) {
+      const el = document.getElementById(id);
+      if (el) el.scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+
+    function submitForm() {
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const message = document.getElementById("message").value.trim();
+      const whatsapp = document.getElementById("whatsapp").value.trim();
+      const status = document.getElementById("form-status");
+
+      if (!name || !email || !message) {
+        status.textContent = "Please fill in Name, Email and Message so we can process your request.";
+        status.style.color = "#f97316";
+        return;
+      }
+
+      // Prepare mailto link text
+      const subject = encodeURIComponent("New Trade Inquiry - Habib Business Group");
+      const body =
+        encodeURIComponent(
+          "Name / Company: " + name + "\n" +
+          "Email: " + email + "\n" +
+          "WhatsApp: " + (whatsapp || "Not provided") + "\n\n" +
+          "Message:\n" + message + "\n\n" +
+          "---\nSent via Habib Business Group website"
+        );
+
+      // Open the user's email client with pre-filled content
+      window.location.href = "mailto:Habibgerba22@gmail.com?subject=" + subject + "&body=" + body;
+
+      status.textContent = "Thank you. Your email window has opened. Please press send to complete.";
+      status.style.color = "#22c55e";
+    }
+
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
